@@ -27,4 +27,9 @@ class FraisInscriptionTest {
         assertThrows(IllegalArgumentException.class,
                 () -> frais.calculer("X9", false));
     }
+
+    @Test
+    void reductionDe10PourCentAvantLaDateLimite() {
+        assertEquals(45000, frais.calculer("L2", false, true));
+    }
 }
